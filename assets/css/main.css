@@ -2638,6 +2638,16 @@ input, select, textarea {
 			width: 100%;
 		}
 
+		.image.main.my {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			
+			width: 50%;
+		}
+
+	
+
 			.image.main:first-child {
 				margin-top: 0;
 			}
@@ -4686,4 +4696,11 @@ input, select, textarea {
 			visibility: visible;
 		}
 
+	}
+
+	.video{
+		margin: 0 auto;
+		width: 40%;
+		/* widht:40vw */
+		display: block;
 	}
