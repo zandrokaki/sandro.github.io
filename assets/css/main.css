@@ -4700,7 +4700,8 @@ input, select, textarea {
 
 	.video{
 		margin: 0 auto;
-		width: 40%;
+		/*width: 40%;*/
 		/* widht:40vw */
 		display: block;
+		object-fit: fill;
 	}
