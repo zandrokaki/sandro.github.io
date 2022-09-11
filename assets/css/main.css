@@ -4700,6 +4700,8 @@ input, select, textarea {
 
 	.video{
 		margin: 0 auto;
+		height: 100%;
+	  	width: 100%;
 		/*width: 40%;*/
 		/* widht:40vw */
 		display: block;
