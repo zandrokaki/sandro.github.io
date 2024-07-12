@@ -47,13 +47,133 @@
 							<section class="post">
 								<header class="major">
 									<span class="date">July 12, 2024</span>
-									<h1>Aard and Wyzz</h1>
+									<div class="image main"><img src="images/ardwizlogo.png" alt="" /></div>
 									<p>Aard and Wyzz is a coop videogame with puzzles and combat </br>
 									developed with my team at Curious Imp in Unreal Engine 5 with C++.
 									</p>
 								</header>
-								<p>Punch with a melee combo with Aard or shoot magic spells with Wyzz. Cooperate to solve puzzles, fight enemies and try to scape of this 
-									dangerous tower. WIP.... </p>
+								<p>
+									This is my biggest project as a videogame developer. It has been a very intense development in which I have learned a lot of things. 
+									In the following sections you will be able to see both the parts of the video game implementation that were implemented by me as well as the ones I was involved in.
+								</br>
+								</p>
+								<header>
+									<h1 class="Camera-Title">Camera</h1>
+								</header>
+								<p>
+									The camera uses a weighting algorithm, according to which the camera will move to one side or another depending on the weights of the entities of interest to 
+									the player in each level. These entities are registered in the camera when we want that the player focuses his/her attention on these elements, such as enemies. Once these entities are no longer important, they are unregistered and the camera
+									will focus on the players again.
+								</p>
+								<video class='video' width="320" height="240" controls>
+									<source src="videos/camera.mp4" type="video/mp4">	
+								</video>
+								<header>
+								</br>
+									<h1 class="AI-Title">Artificial Intelligence</h1>
+								</header>
+								<p>
+									In this game, enemies are controlled by an aggro system. It allows splitting the enemy pressure between both players equally, avoiding to punish only one player.
+									This is a coop videogame, so it has to be enjoyable by two players at the same time, which adds some complexity to the AI, thats why a system like this was implemented.
+									In the following video, you can see how enemies are distributed along the players (melee enemies have less aggro than the ones with the shield because of the skill required to eliminate each of them).
+								</p>
+								<video class='video' width="320" height="240" controls>
+									<source src="videos/enemiesAggro.mp4" type="video/mp4">	
+								</video>
+								</br>
+								<p>
+									On the other hand, a flocking enemy system was implemented too. This was an additional implementation that was done for aesthetics to avoid the typical "queue" of enemies
+									chasing the player. We wanted that the players had a sense of intelligent enemies, thats why the shield enemy tries to avoid being surrounded by players, as you can see in the following video.
+								</p>
+								<video class='video' width="320" height="240" controls>
+									<source src="videos/enemiesFlocking.mp4" type="video/mp4">	
+								</video>
+								<header>
+								</br>
+									<h1 class="Characters-Title">Characters</h1>
+								</header>
+								<p>
+									Aard and Wyzz combos and animations have been implemented as smooth as posible to provoke in the player the feeling of wanting to eliminate enemies. A charged attack has also been implemented for both characters, 
+									which the player can launch by releasing the button. In addition, both characters have a 3-hit combo, being the last hit the one that makes more damage.
+								</p>
+								<video class='video' width="320" height="240" controls>
+									<source src="videos/charactersCombos.mp4" type="video/mp4">	
+								</video>
+								</br>
+								<header>
+									<h1 class="LifeSystem-Title">Life System</h1>
+								</header>
+								<p>
+									The life system was made with a series of hearts, based on The Legend of Zelda videogames saga. Players may lose life due to enemies or 
+									falling into the void the form of heart quarters.
+								</p>
+								<div class="image main"><img src="images/lifesystem.png" alt="" /></div>
+								<video class='video' width="320" height="240" controls>
+								</br>
+									<source src="videos/deathScreen.mp4" type="video/mp4">	
+								</video>
+								<header>
+								</br>
+									<h1 class="karen-Title">Karen and Golem Karen Bossfight</h1>
+								</header>
+								<div class="image main"><img src="images/karen.png" alt="" /></div>
+								<p>
+									Karen has three attacks: laser beams, scroll rain and the turntable.
+								</p>
+								<header>
+									<h2 class="karen-Title">Laser beams</h2>
+								</header>
+								<p>
+								</br>
+									Karen shoots laser beams from her eyes for a set time which chase the players.
+								</p>
+								<video class='video' width="320" height="240" controls>
+									<source src="videos/karenLaser.mp4" type="video/mp4">	
+								</video>
+								<header>
+								</br>
+									<h2 class="karen-Title">Scroll Rain</h2>
+								</header>
+								<p>
+									Karen throws scrolls trying to hit the players. For this attack, a matrix of cells was implemented to detect the players and throw the scrolls as equally as possible to both players, 
+									avoiding throwing patterns and giving some randomness to the attack.  
+								</p>
+								<video class='video' width="320" height="240" controls>
+									<source src="videos/karenTable.mp4" type="video/mp4">	
+								</video>
+								<header>
+								</br>
+									<h2 class="karen-Title">Turntable</h2>
+								</header>
+								<p>
+									Karen tilts the table trying to make the players fall down while continuing to throw scrolls which roll across the table,
+									trying to throw the players out of the combat arena.
+								</p>
+								<video class='video' width="320" height="240" controls>
+									<source src="videos/karenScrolls.mp4" type="video/mp4">	
+								</video>
+								<header>
+								</br>
+									<h2 class="Pause-Title">Menus</h2>
+								</header>
+								<p>
+									A main menu and a character selection menu were implemented to allow player 1 to choose the character to control. In addition a pause menu was also implemented for each of them
+									depending on which player paused the game.
+								</p>
+								<video class='video' width="320" height="240" controls>
+									<source src="videos/mainMenu.mp4" type="video/mp4">	
+								</video>
+								</br>
+								<video class='video' width="320" height="240" controls>
+									<source src="videos/pauseMenu.mp4" type="video/mp4">	
+								</video>
+							</br>
+								<p>
+								As a final note, all animations (via blendspaces and blends per bone) as well as VFX were introduced and implemented (NOT CREATED) in the game by the programming team through
+								the use of dynamic materials (like Aard's fire fists, Karen's lasers...). </br></br>
+								There are more details that I don't want to reveal but I am sure you will like them.
+								<a href="https://store.steampowered.com/app/2984220/Aard_and_Wyzz_The_rise_of_minions/">The demo is available on Steam </a>, thank you and I hope you like it!
+								</p>
 								<!--<div class="image main"><img src="images/tt1.png" alt="" /></div>-->
 								<!--<p>On the image, there is an experience bar above that is empty and tank health below. When tank destroys towers, its experience is increased
 								and its health is increased (Default value is 100).
